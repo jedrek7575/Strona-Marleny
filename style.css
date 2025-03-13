@@ -116,8 +116,12 @@ transition: 0.3s ease-in-out;
   padding: 0;
   display:flex;
   flex-direction: row;
+  border-bottom: solid;
+  border-bottom-color: aqua;
+  border-image: linear-gradient(25deg, aqua, transparent) 1;
   
 }
+
 
 .menu a {
 color: black;
@@ -152,7 +156,6 @@ filter: drop-shadow(0px 15px 15px rgba(0, 0, 0, 0.999));
 
 border: none;
 cursor: pointer;
-position: relative;
 }
 
 .dropdown:hover .tryb {
