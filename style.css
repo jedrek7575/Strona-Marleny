@@ -72,7 +72,7 @@ body {
 text-align: center;
 display: flex;
 justify-content: center;
-background: linear-gradient(rgb(8, 0, 51), rgb(29, 0, 0));
+background: linear-gradient(rgb(90, 102, 126), rgb(147, 179, 211));
 background-size: cover; /* Dopasowanie do ekranu */
 background-position: center; /* Wyśrodkowanie */
 background-repeat: no-repeat; /* Zapobieganie powtarzaniu */
@@ -82,7 +82,7 @@ min-height: 100vh;
 }
 
 #wrapper {
-background: radial-gradient(white,rgb(233, 221, 221));
+background: linear-gradient(rgb(255, 255, 255) 70%, rgb(255, 255, 255));
 width: 90%;
 box-shadow:
 0px 15px 30px rgba(0, 0, 0, 0.4),
@@ -243,7 +243,7 @@ font-size: 100px;
 iframe {
   width: 80%;
   margin-bottom: 70PX;
-  border: 10px solid transparent;
+  border: 5px solid transparent;
   background:
               linear-gradient(360deg, white, rgb(22,15,39)) border-box;
   border-radius: 0 0 25px 25px;
