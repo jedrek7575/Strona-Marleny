@@ -86,7 +86,7 @@ min-height: 100vh;
 background: radial-gradient(white,rgb(233, 221, 221));
 width: 75%;
 margin: 0 auto 0 auto;
-padding: ;
+padding: 0px;
 box-shadow: 
 0px 15px 30px rgba(0, 0, 0, 0.4), 
 0px 20px 50px rgba(0, 0, 0, 0.3);
@@ -243,4 +243,8 @@ position: ;
 
 h2 {
 font-size: 100px;
+}
+
+iframe {
+  width: 100%;
 }
