@@ -14,3 +14,14 @@ tabs.forEach(tab => {
     target.classList.add('active')
   })
 })
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".tryb"); // Ikona tryb
+    const menuList = document.querySelector(".dropdown ul"); // Lista menu
+
+    menuToggle.addEventListener("click", function () {
+      menuList.classList.toggle("active"); // Dodaje/usuwa klasę "active"
+    });
+  });
+
