@@ -7,7 +7,12 @@
   <script src="script2.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+  
   <title>Strona główna</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -20,7 +25,7 @@
           <img class= "tryb" src= menu1.png alt= "menu">
       <ul>
         <li data-tab-target="#aktualnosci">Aktualności</li>
-        <li data-tab-target="#bio">Bio</li>
+        <li data-tab-target="#zespol">Zespół</li>
         <li data-tab-target="#teatr">Teatr</li>
         <li data-tab-target="#filmografia">Filmografia</li>
         <li data-tab-target="#wspolpraca">Współpraca</li>
@@ -36,30 +41,86 @@
   <section>
   <div class="tab-content">
      <div id="aktualnosci" data-tab-content class="active">
-       <iframe class="wizytowka" width="1000" height="563" src="https://www.youtube.com/embed/cxRwGqpyTG0?si=y2F-god3TcdzKQcT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-       <h1>Aktualnosci</h1>
-       <p>Tu będa aktualności</p>
+       <iframe class="wizytowka" width="1000" height="563" src="https://www.youtube.com/embed/cxRwGqpyTG0?si=y2F-god3TcdzKQcT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+       <h1>O mnie słów kilka...</h1>
+       <img class="marlena" src="marlena.jpg" alt="Jpg">
+       <p class="reveal">Nazywam się Marlena Burian. Ukończyłam  Lart Studio w Krakowie, które ukształtowało moją drogę aktorską, dając mi solidne podstawy do rozwijania się na scenie i przed kamerą. Mój rozwój nie kończył się jednak na studiach – uczestniczyłam również w warsztatach aktorskich pod okiem Beaty Fudalej, Doroty Zięciowskiej oraz Agnieszki Pilaszewskiej. To właśnie dzięki tym mistrzom mogłam udoskonalić swoje umiejętności, co owocuje każdym kolejnym projektem.
+
+        Moje doświadczenie filmowe rozpoczęło się w 2014 roku od głównej roli w filmie fabularnym „Karolina” w reżyserii Dariusza Reguckiego. Jednak szeroką rozpoznawalność przyniosła mi rola Mirelli w serialu „Rodzinny interes”, w którym grałam od 2017 do 2023 roku. W międzyczasie miałam także przyjemność występować w wielu innych popularnych produkcjach telewizyjnych, takich jak „Na sygnale”, „Ojciec Mateusz”, „Osiecka” czy „Barwy szczęścia”.
+        
+        Moją prawdziwą pasją jest teatr. W latach 2014–2016 współpracowałam z Teatrem Trzcina, gdzie zagrałam monodram „Wyznanie”. Obecnie jestem związana z Teatrem Bajaderka, w którym występuję w spektaklach dla dzieci, łącząc aktorstwo z wokalem.</p2>
+       </p>
       </div>
-     <div id="bio" data-tab-content>
-       <h1>
-       <p>Tu będzie biogram</p>
-       <iframe width="1000" height="563" src="https://www.youtube.com/embed/GnZHFvwVZ2I?si=NzN4QDW2hym0wtU9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+     <div id="zespol" data-tab-content>
+       <h2>Bio</h2>
+       <p></p>
      </div>
      <div id="teatr" data-tab-content>
-       <h2>Teatr</h2>
-       <p>Tu będzie teatr!</p>
+       <h3>Teatr</h3>
+       <p class="teatr">Monodram „Wyznanie” w reżyserii Kariny Góry był dla mnie wyjątkową podróżą artystyczną, która spotkała się z niezwykłym uznaniem na wielu festiwalach. Spektakl przyniósł mi Nagrodę Aktorską na VI Przeglądzie Teatrów Amatorskich SPOT w Warszawie, a także Wyróżnienie Aktorskie podczas VI Będzińskich Spotkań Aktorskich BEST 2013. Na 14. Ogólnopolskim Festiwalu Ewentualnych Talentów Aktorskich FeTA 2013 otrzymałam kolejną Nagrodę Aktorską.Ukoronowaniem tej artystycznej drogi było zdobycie I Nagrody na 5. Ogólnopolskich Spotkaniach Jednego Aktora „Monodram” w 2013 roku. </p>
+       <div class="container">
+        <input type="radio" name="slide" id="c1" checked>
+        <label for="c1" class="card">
+            <div class="row">
+                <div class="icon">1</div>
+                <div class="description">
+                    <h4>Winter</h4>
+                    <p>Winter has so much to offer -
+                     creative activities</p>
+                </div>
+            </div>
+        </label>
+        <input type="radio" name="slide" id="c2" >
+        <label for="c2" class="card">
+            <div class="row">
+                <div class="icon">2</div>
+                <div class="description">
+                    <h4>Digital Technology</h4>
+                    <p>Gets better every day -
+                     stay tuned</p>
+                </div>
+            </div>
+        </label>
+        <input type="radio" name="slide" id="c3" >
+        <label for="c3" class="card">
+            <div class="row">
+                <div class="icon">3</div>
+                <div class="description">
+                    <h4>Globalization</h4>
+                    <p>Help people all over the world</p>
+                </div>
+            </div>
+        </label>
+        <input type="radio" name="slide" id="c4" >
+        <label for="c4" class="card">
+            <div class="row">
+                <div class="icon">4</div>
+                <div class="description">
+                    <h4>New technologies</h4>
+                    <p>Space engineering becomes
+                     more and more advanced</p>
+                </div>
+            </div>
+        </label>
+
+    </div>
+       
      </div>
      <div id="filmografia" data-tab-content>
-       <h1>Galeria</h1>
+       <h4>Galeria</h4>
        <p>Zdjęcia!</p>
      </div>
      <div id="wspolpraca" data-tab-content>
-       <h1>Współpraca</h1>
+       <h5>Współpraca</h5>
        <p>Telefoniści jebani!</p>
      </div>
    </section>
-   <footer></footer>
-
+   <footer>
+    All rights reserved. © 2025 Marlena Burian
+   </footer>
+   <footer2>
+    Cookies and GDPR (RODO)
+   </footer2>
   </div>
 
 
