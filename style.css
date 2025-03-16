@@ -227,8 +227,8 @@ filter: drop-shadow(0px 8px 6px rgba(0, 0, 0, 0.4));
     transition: 0.3s ease-in-out;
   }
 
-  .tryb.active {
-    
+  .logo {
+    width: 10px;
   }
 
 
