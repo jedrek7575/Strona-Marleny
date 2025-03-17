@@ -194,6 +194,15 @@ filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
 
 @media (max-width: 1500px) {
     
+  .iks {
+    display: block;
+  }
+
+  .ramie {
+    width: 25px;
+    z-index: 1001;
+  }
+
 
   .dropdown ul {
     
@@ -207,7 +216,7 @@ filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
       0px 15px 30px rgba(0, 0, 0, 0.4),
       px 20px 50px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    height: 1000vh;
+    height: 100vh;
     z-index: 1000;
     max-height: 0;
     opacity: 0;
