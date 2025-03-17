@@ -68,3 +68,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(moveCarousel, 2000); // Zmiana co 2 sekundy
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const menu = document.querySelector(".dropdown ul");
+  const closeBtn = document.querySelector(".close-menu");
+  const trybBtn = document.querySelector(".tryb");
+
+  trybBtn.addEventListener("click", function() {
+    menu.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", function() {
+    menu.classList.remove("active");
+  });
+});
