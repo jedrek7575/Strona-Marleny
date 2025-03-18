@@ -5,8 +5,15 @@
 }
 
 
-:root {
-  --blue:	#87CEFA
+@media (hover: none) {
+  *:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+button:focus-visible, a:focus-visible {
+  outline: 2px solid #ff0000; /* np. czerwona obwódka zamiast błękitnej */
 }
 
 
