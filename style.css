@@ -217,7 +217,7 @@ filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
     
     flex-direction: column; /* Aby elementy były jeden pod drugim */
     position: absolute;
-    right: -330px;
+    right: 50vh;
     top: 0px;
     bottom: 0;
     background: linear-gradient(25deg, rgb(94, 75, 75),white);
@@ -230,9 +230,9 @@ filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    width: 450px;
-    transform: translateX(100%);
-    transform: translateY(50%);
+    width: 50vh;
+    transform: translateX(200%);
+    
     transform-origin: right center;
     transition: 0.5s ease-in-out;
     
@@ -245,7 +245,7 @@ filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
     flex-direction: column;
     transition: 0.3s ;
     z-index: 1001;
-    transform: translateX(-73%);
+    transform: translateX(100%);
     
     
 }
@@ -420,11 +420,6 @@ border-radius: 15px;
     top: 670px;
     width: 60%;
     right: 2.7%;
-  }
-
-  .dropdown ul {
-    
-    
   }
   
   
