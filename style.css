@@ -14,15 +14,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-button, a, input, textarea {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-*:active {
-  outline: none !important;
-  box-shadow: none !important;
-}
 
 
 html {
