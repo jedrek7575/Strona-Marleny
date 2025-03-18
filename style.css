@@ -257,8 +257,9 @@ filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
   }
 
   .dropdown ul li {
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+    font-size: 2vw;
+    padding-top: 2vh;
+    
   }
 
 
@@ -422,6 +423,12 @@ border-radius: 15px;
     right: 2.7%;
   }
   
+  .dropdown ul li {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 4.5vw;
+    line-height: auto;
+  }
   
 
 }
