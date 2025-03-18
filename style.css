@@ -198,8 +198,8 @@ filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
   .close-menu {
     display: block;
     position: relative;
-    top: -0px;
-    margin-left: -390px;
+    top: -0%;
+    margin-left: -40vh;
     background: none;
     border: none;
     font-size: 60px;
