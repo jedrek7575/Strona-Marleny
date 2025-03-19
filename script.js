@@ -1,25 +1,21 @@
-const tabs = document.querySelectorAll('[data-tab-target]')
-const tabContents = document.querySelectorAll('[data-tab-content]')
+const tabs = document.querySelectorAll('[data-tab-target]');
+const tabContents = document.querySelectorAll('[data-tab-content]');
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.dataset.tabTarget)
-    tabContents.forEach(tabContent => {
-      tabContent.classList.remove('active')
-    })
-    tabs.forEach(tab => {
-      tab.classList.remove('active')
-    })
-    tab.classList.add('active')
-    target.classList.add('active')
-  })
-})
-
-
-const mobileNav = document.querySelector('.dropdown ul');
-const burgerIcon = document.querySelector('.tryb');
+    const target = document.querySelector(tab.dataset.tabTarget);
+    tabContents.forEach(tabContent => tabContent.classList.remove('active'));
+    tabs.forEach(tab => tab.classList.remove('active'));
+    tab.classList.add('active');
+    target.classList.add('active');
+  });
+});
 
 // Obsługa kliknięcia na ikonę trybu
+const mobileNav = document.querySelector('.dropdown ul');
+const burgerIcon = document.querySelector('.tryb');
+const menuItems = document.querySelectorAll('.dropdown ul li'); // Pobiera wszystkie pozycje menu
+
 burgerIcon.addEventListener('click', function(event) {
     mobileNav.classList.toggle('active');
     burgerIcon.classList.toggle('active');
@@ -37,37 +33,26 @@ document.addEventListener('click', function(event) {
     }
 });
 
-//pojawianie i znikanie tekstu
+// Zamknięcie menu po kliknięciu dowolnej pozycji w nim
+menuItems.forEach(item => {
+    item.addEventListener('click', function() {
+        mobileNav.classList.remove('active');
+        burgerIcon.classList.remove('active');
+    });
+});
 
+// Pojawianie i znikanie tekstu
 let observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
       if (entry.isIntersecting) {
           entry.target.classList.add("visible");
       } else {
-          entry.target.classList.remove("visible"); // Usuwa klasę, jeśli element znika
+          entry.target.classList.remove("visible");
       }
   });
 }, { threshold: 0.2 });
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const track = document.querySelector(".carousel-track");
-  const images = document.querySelectorAll(".carousel img");
-  const imageWidth = images[0].clientWidth;
-  let index = 0;
-
-  function moveCarousel() {
-    index++;
-    if (index > images.length - 3) {
-      index = 0; // Reset do początku
-    }
-    track.style.transform = `translateX(-${index * imageWidth}px)`;
-  }
-
-  setInterval(moveCarousel, 2000); // Zmiana co 2 sekundy
-});
 
 document.addEventListener("DOMContentLoaded", function() {
   const menu = document.querySelector(".dropdown ul");
@@ -80,5 +65,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
   closeBtn.addEventListener("click", function() {
     menu.classList.remove("active");
+  });
+});
+
+
+//otwieranie zdjęć aktualności
+
+document.addEventListener("DOMContentLoaded", function() {
+  const items = document.querySelectorAll(".gallery-item");
+  const lightbox = document.querySelector(".lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const lightboxCaption = document.querySelector(".lightbox-caption");
+
+
+  items.forEach(item => {
+    item.addEventListener("click", function() {
+      const img = this.querySelector("img");
+      const rozwinText = this.querySelector(".rozwin").innerHTML; // Pobranie tylko tekstu z <p class="rozwin">
+      
+      lightboxImg.src = img.src;
+      lightboxCaption.innerHTML = rozwinText; // W lightboxie pokazuje się tylko tekst <p class="rozwin">
+      lightbox.style.display = "flex";
+    });
+  });
+
+
+  // Zamknięcie lightboxa po kliknięciu
+  lightbox.addEventListener("click", function() {
+    lightbox.style.display = "none";
   });
 });
