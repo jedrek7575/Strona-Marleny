@@ -608,6 +608,7 @@ border-radius: 15px;
   justify-content: start;
   margin-left: -5vh;
   margin-right: 10vh;
+  ;
 }
 
 .card {
@@ -693,6 +694,14 @@ input:checked + label .description {
   background-image: url('teatr.jpg');
 }
 
+
+
+
+
+
+
+
+
 footer {
   margin-top: 500px;
 }
@@ -720,11 +729,3 @@ footer {
   border-radius: 15px;
 }
 
-@media (max-width: 800px) {
-  .teatr {
-    font-size: 4vw;
-  }
-  .container {
-    margin-left: -4vh;
-  }
-}
