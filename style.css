@@ -66,10 +66,7 @@ html {
   display: block;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-}
+
 
 .tabs {
   display: flex;
@@ -88,7 +85,7 @@ body {
 .tab.active {
   background: linear-gradient(45deg, rgb(209, 177, 177),rgb(212, 96, 96));
   color: black;
-  
+  border-radius: 4px;
 }
 
 
@@ -140,12 +137,11 @@ body::before {
 }
 
 #wrapper {
-background: radial-gradient(circle, rgb(203, 202, 209), rgb(226, 227, 240));
+background: radial-gradient(circle, rgb(203, 202, 209, 0.86), rgb(226, 227, 240, 0.86));
 width: 90%;
 box-shadow:
-0px 15px 30px rgba(0, 0, 0, 0.9),
-0px 20px 50px rgba(0, 0, 0, 0.);
-border-radius: 10px;
+0px 15px 90px rgba(0, 0, 0, 0.9);
+
 }
 
 #wrapper {
@@ -167,7 +163,7 @@ transition: 0.3s ease-in-out;
 
 
 .menu {
-  background: linear-gradient(to right, rgb(38, 42, 48) 10%, rgb(122, 130, 134), rgb(77, 82, 85));
+  background: linear-gradient(to right, rgb(38, 42, 48, 0.9) 10%, rgb(122, 130, 134, 0.9), rgb(77, 82, 85, 0.9));
   display: inline-block;
   box-shadow: 
   0px 15px 30px rgba(0, 0, 0, 0.4),
@@ -183,7 +179,7 @@ transition: 0.3s ease-in-out;
   z-index: 10000;
   border-top: 3px solid;
   border-image: linear-gradient(to right, rgb(255, 31, 31), rgb(122, 130, 134), rgb(77, 82, 85)) 1;
-  opacity: 95%;
+  
 }
 
 
@@ -240,7 +236,7 @@ font-family: "Playfair Display", serif;
   font-style: italic;
 
 width: 100%;
-height: 120%;
+height: 105%;
 color: rgb(255, 255, 255);
 filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
 
@@ -406,14 +402,19 @@ filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
   }
 }
 
+@media (max-width: 800px) {
+  
+  .dropdown ul li {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 5vh;
+    line-height: auto;
+  }
+
+}
 
 
-
-
-
-
-
-
+/*Aktualności*/
 
 
 h1 {
@@ -426,12 +427,20 @@ font-family: "Dancing Script", cursive;
   font-weight: <weight>;
   font-style: normal;
 padding-bottom: 2vw;
-z-index: 1001;
+z-index: 100;
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 7vw;
+    left: -7%;
+    margin-top: 15%;
+  }
 }
 
 .reveal {
 
-font-size: 2vw;
+font-size: 1.6vw;
 margin-right: 30%;
 
 padding-top:4vw;
@@ -449,6 +458,8 @@ backdrop-filter: blur(4px);
 box-shadow:
 0px 15px 30px rgba(0, 0, 0, 0.4);
 border-radius: 15px;
+font-family: Arial, Helvetica, sans-serif;
+font-style: italic;
 }
 
 .reveal {
@@ -460,6 +471,17 @@ border-radius: 15px;
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+
+  .reveal {
+    font-size: 3vw;
+    text-align: justify;
+    margin-right: 20%;
+    margin-top: 5%;
+    margin-left: -8%;
+  }
 }
 
 
@@ -474,41 +496,15 @@ border-radius: 15px;
   border: 3px solid;
   border-image: linear-gradient(130deg, rgb(255, 89, 89), rgb(255, 255, 255), rgb(111, 158, 202), rgb(139, 148, 153)) 1;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4) ;
-  z-index: 1000;
+  z-index: 10;
 }
 
 @media (max-width: 800px) {
-  
-  h1 {
-    font-size: 7vw;
-    left: -7%;
-    margin-top: 15%;
-  }
-
-  .reveal {
-    font-size: 3vw;
-    text-align: justify;
-    margin-right: 20%;
-    margin-top: 5%;
-    margin-left: -8%;
-  }
-
   .marlena {
     top: 670px;
     width: 60%;
     right: 2.7%;
   }
-  
-  .dropdown ul li {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    font-size: 5vh;
-    line-height: auto;
-    
-  }
-  
-  
-
 }
 
 
@@ -520,6 +516,27 @@ border-radius: 15px;
               linear-gradient(25deg, rgb(167, 95, 95), rgb(83, 142, 190)) border-box;
   border-radius: 0 0 5px 5px;
 }
+
+.a1 {
+  font-size: 4vw;
+  position: relative;
+  text-align: left;
+  margin-top: 22vh;
+  font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  padding-bottom: 2vw;
+  z-index: 100;
+  }
+
+  @media (max-width: 800px) {
+    .a1 {
+      font-size: 7vw;
+      left: 3%;
+      margin-top: 15%;
+    }
+  }
 
 .gallery {
   margin-top: 5%;
@@ -591,6 +608,7 @@ border-radius: 15px;
   object-fit: contain; /* Zapewnia, że całe zdjęcie się zmieści bez przycinania */
   z-index: 9999;
   border-radius: 5px;
+  transition: 0.3s ease-in-out;
 }
 
 .lightbox-caption {
@@ -601,8 +619,15 @@ border-radius: 15px;
 }
 
 
+/*Koniec aktualności*/
 
+/*Karta Nazwa*/
 
+h2 {
+  font-size: 200px;
+}
+
+/*Koniec karty Nazwa*/
 
 /* Karta teatr */
 
@@ -711,7 +736,7 @@ footer {
   margin-right: 0%;
   margin-top: -5vh;
   margin-left: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
 
   padding-top:4vw;
   padding-top:3vw;
@@ -736,7 +761,19 @@ footer {
   }
 }
 
-
-.telefon {
-  font-size: 200px;
+h3 {
+  font-size: 4vw;
+  margin-bottom: 5%;
+  text-align: left;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
+
+.teatrb {
+  font-size: 1.6vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
