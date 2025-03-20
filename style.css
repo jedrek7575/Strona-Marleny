@@ -150,11 +150,11 @@ transition: 0.3s ease-in-out;
 
 
 .logo1 {
-  width: 500px;
-  height: 80.78px;
+  width: 30%;
+  height: 30%; 
   margin-left: 50px;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-top: 2%;
+  margin-bottom: 1%;
 }
 
 .logo2 {
@@ -176,7 +176,7 @@ transition: 0.3s ease-in-out;
   padding: 0;
   display:flex;
   flex-direction: row;
-  z-index: 10000;
+  z-index: 1001;
   border-top: 3px solid;
   border-image: linear-gradient(to right, rgb(255, 31, 31), rgb(122, 130, 134), rgb(77, 82, 85)) 1;
   
@@ -257,7 +257,7 @@ filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
   box-shadow: 
   0px 15px 30px rgba(0, 0, 0, 0.4),
   0px 20px 50px rgba(0, 0, 0, 0.3);
-  font-size: 32px; 
+  font-size: 3.5vh; 
   color: rgb(0, 0, 0);
 }
 
@@ -269,7 +269,7 @@ filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
 
 
 
-@media (max-width: 1500px) {
+@media (max-width: 1100px) {
     
 
   .close-menu {
@@ -568,7 +568,7 @@ font-style: italic;
   background:
               linear-gradient(25deg, rgb(255, 57, 57), rgb(103, 184, 255)) border-box;
    
-  
+  z-index: 100;
   box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4) ;
 }
 
@@ -599,14 +599,14 @@ font-style: italic;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 1000;
+  z-index: 1002;
 }
 
 .lightbox-img {
   max-width: 80%;
   max-height: 80%;
   object-fit: contain; /* Zapewnia, że całe zdjęcie się zmieści bez przycinania */
-  z-index: 9999;
+  z-index: ;
   border-radius: 5px;
   transition: 0.3s ease-in-out;
 }
