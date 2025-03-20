@@ -56,7 +56,57 @@ html {
     "wdth" 100;
 }
 
+/*Przełączanie między kartami*/
 
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid black;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab.active {
+  background: linear-gradient(45deg, rgb(209, 177, 177),rgb(212, 96, 96));
+  color: black;
+  
+}
+
+
+
+.tab-content {
+  text-align: center;
+  margin-top: 80px;
+  margin-left: 8%;
+  margin-right: 8%;
+  }
+
+
+
+
+
+
+
+/*Koniec*/
 
 html {
 overflow-y: auto;
@@ -361,22 +411,10 @@ filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
 
 
 
-/* Przełączanie między kartami */
 
-.tab-content {
-text-align: center;
-margin-top: 80px;
-margin-left: 8%;
-margin-right: 8%;
-}
 
-[data-tab-content] {
-display:none;
-}
 
-.active[data-tab-content] {
-display:block;
-}
+
 
 h1 {
 font-size: 4vw;
@@ -483,7 +521,84 @@ border-radius: 15px;
   border-radius: 0 0 5px 5px;
 }
 
+.gallery {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  margin-left: -7%;
+  margin-right: -7%;
+  
+}
 
+.gallery-item {
+  position: relative;
+  width: 200vh;
+  height: 60vh;
+  
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 70PX;
+  border: 5px solid transparent;
+  background:
+              linear-gradient(25deg, rgb(255, 57, 57), rgb(103, 184, 255)) border-box;
+   
+  
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4) ;
+}
+
+.caption {
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 5px;
+  font-size: 14px;
+}
+
+.rozwin {
+  display: none;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.lightbox-img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain; /* Zapewnia, że całe zdjęcie się zmieści bez przycinania */
+  z-index: 9999;
+  border-radius: 5px;
+}
+
+.lightbox-caption {
+  color: white;
+  margin-top: 10px;
+  font-size: 18px;
+  
+}
 
 
 
@@ -619,4 +734,9 @@ footer {
   .container {
     margin-left: -4vh;
   }
+}
+
+
+.telefon {
+  font-size: 200px;
 }

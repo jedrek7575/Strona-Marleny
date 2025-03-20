@@ -1,15 +1,21 @@
-const tabs = document.querySelectorAll('[data-tab-target]');
-const tabContents = document.querySelectorAll('[data-tab-content]');
+// Przełączanie kart
+const tabs = document.querySelectorAll('[data-tab-target]')
+const tabContents = document.querySelectorAll('[data-tab-content]')
 
 tabs.forEach(tab => {
   tab.addEventListener('click', () => {
-    const target = document.querySelector(tab.dataset.tabTarget);
-    tabContents.forEach(tabContent => tabContent.classList.remove('active'));
-    tabs.forEach(tab => tab.classList.remove('active'));
-    tab.classList.add('active');
-    target.classList.add('active');
-  });
-});
+    const target = document.querySelector(tab.dataset.tabTarget)
+    tabContents.forEach(tabContent => {
+      tabContent.classList.remove('active')
+    })
+    tabs.forEach(tab => {
+      tab.classList.remove('active')
+    })
+    tab.classList.add('active')
+    target.classList.add('active')
+  })
+})
+
 
 // Obsługa kliknięcia na ikonę trybu
 const mobileNav = document.querySelector('.dropdown ul');
@@ -41,6 +47,23 @@ menuItems.forEach(item => {
     });
 });
 
+
+//zamykanie menu
+
+document.addEventListener("DOMContentLoaded", function() {
+  const menu = document.querySelector(".dropdown ul");
+  const closeBtn = document.querySelector(".close-menu");
+  const trybBtn = document.querySelector(".tryb");
+
+  trybBtn.addEventListener("click", function() {
+    menu.classList.add("active");
+  });
+
+  closeBtn.addEventListener("click", function() {
+    menu.classList.remove("active");
+  });
+});
+
 // Pojawianie i znikanie tekstu
 let observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -54,16 +77,33 @@ let observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-document.addEventListener("DOMContentLoaded", function() {
-  const menu = document.querySelector(".dropdown ul");
-  const closeBtn = document.querySelector(".close-menu");
-  const trybBtn = document.querySelector(".tryb");
 
-  trybBtn.addEventListener("click", function() {
-    menu.classList.add("active");
+
+
+
+//otwieranie lightboxa
+
+document.addEventListener("DOMContentLoaded", function() {
+  const items = document.querySelectorAll(".gallery-item");
+  const lightbox = document.querySelector(".lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const lightboxCaption = document.querySelector(".lightbox-caption");
+
+
+  items.forEach(item => {
+    item.addEventListener("click", function() {
+      const img = this.querySelector("img");
+      const rozwinText = this.querySelector(".rozwin").innerHTML; // Pobranie tylko tekstu z <p class="rozwin">
+      
+      lightboxImg.src = img.src;
+      lightboxCaption.innerHTML = rozwinText; // W lightboxie pokazuje się tylko tekst <p class="rozwin">
+      lightbox.style.display = "flex";
+    });
   });
 
-  closeBtn.addEventListener("click", function() {
-    menu.classList.remove("active");
+
+  // Zamknięcie lightboxa po kliknięciu
+  lightbox.addEventListener("click", function() {
+    lightbox.style.display = "none";
   });
 });
