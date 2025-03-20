@@ -150,8 +150,8 @@ transition: 0.3s ease-in-out;
 
 
 .logo1 {
-  width: 30%;
-  height: 30%; 
+  width: 25%;
+  height: 25%; 
   margin-left: 50px;
   margin-top: 1vh;
   margin-bottom: 1vh;
@@ -203,32 +203,39 @@ transition: 0.3s ease-in-out;
 .dropdown {
 border: none;
 cursor: pointer;
+position: relative;
+display: inline-block;
 }
 
 
 .dropdown ul {
-  height: 110px;
+  
+
+  right: 0;
   background: transparent;
-  position: relative;
-  width: 150px;
+  top: 00%;
+  max-width: 90vh;
   list-style-type: none;
   box-shadow: 0px 0px 23px 0 px rgba(0,0,0,0.9);
-  
+  margin-top: 0px;
   border-radius: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: auto;;
-  z-index: 1000;
-  margin-right: 0px;
+  z-index: 1100;
+  position: absolute;
+  margin-right: 20px;
+  
+
 }
 
 
 
 .dropdown ul li {
-padding: 3vh;
-padding-top: 2vh;
-font-size: 3vh;
+padding: 25px;
+padding-top: 25px;
+font-size: 25px;
 
 font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -236,7 +243,7 @@ font-family: "Playfair Display", serif;
   font-style: italic;
 
 width: auto;
-height: 14vh;
+height: 100px;
 color: rgb(255, 255, 255);
 filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
 
