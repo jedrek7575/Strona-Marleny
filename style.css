@@ -213,7 +213,7 @@ cursor: pointer;
   width: 150px;
   list-style-type: none;
   box-shadow: 0px 0px 23px 0 px rgba(0,0,0,0.9);
-  margin-top: -7px;
+  
   border-radius: 7px;
   display: flex;
   justify-content: center;
@@ -226,8 +226,8 @@ cursor: pointer;
 
 
 .dropdown ul li {
-padding: 30px;
-padding-top: 40px;
+padding: 3vh;
+padding-top: 2vh;
 font-size: 3vh;
 
 font-family: "Playfair Display", serif;
@@ -235,7 +235,7 @@ font-family: "Playfair Display", serif;
   font-weight: 838;
   font-style: italic;
 
-width: 100%;
+width: auto;
 height: 14vh;
 color: rgb(255, 255, 255);
 filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
