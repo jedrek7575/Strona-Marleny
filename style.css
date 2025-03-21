@@ -152,7 +152,7 @@ transition: 0.3s ease-in-out;
 .logo1 {
   width: 25%;
   height: 25%; 
-  margin-left: 50px;
+  margin-left: 10px;
   margin-top: 1vh;
   margin-bottom: 1vh;
 }
@@ -210,22 +210,19 @@ display: inline-block;
 
 .dropdown ul {
   
-
-  right: 0;
   background: transparent;
-  top: 00%;
-  max-width: 90vh;
+  top: 0;
   list-style-type: none;
   box-shadow: 0px 0px 23px 0 px rgba(0,0,0,0.9);
   margin-top: 0px;
   border-radius: 7px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: auto;;
+  
+  
+  width: auto;
   z-index: 1100;
-  position: absolute;
-  margin-right: 20px;
+  position: relative;
+  margin-right: 5px;
   
 
 }
@@ -234,8 +231,9 @@ display: inline-block;
 
 .dropdown ul li {
 padding: 25px;
-padding-top: 25px;
+padding-bottom: 2vh;
 font-size: 25px;
+padding-top: 5px;
 
 font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -243,7 +241,7 @@ font-family: "Playfair Display", serif;
   font-style: italic;
 
 width: auto;
-height: 100px;
+line-height: 130%;
 color: rgb(255, 255, 255);
 filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
 
@@ -264,7 +262,7 @@ filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
   box-shadow: 
   0px 15px 30px rgba(0, 0, 0, 0.4),
   0px 20px 50px rgba(0, 0, 0, 0.3);
-  font-size: 3.5vh; 
+  font-size: 27px; 
   color: rgb(0, 0, 0);
 }
 
