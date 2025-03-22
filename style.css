@@ -214,7 +214,7 @@ display: inline-block;
   top: 0;
   list-style-type: none;
   box-shadow: 0px 0px 23px 0 px rgba(0,0,0,0.9);
-  margin-top: 0px;
+  margin-top: -5px;
   border-radius: 7px;
   display: flex;
   
@@ -330,7 +330,7 @@ filter: drop-shadow(6px 7px 6px rgba(0, 0, 0, 0.7));
     flex-direction: column;
     transition: 0.3s ;
     z-index: 1001;
-    transform: translateX(100%);
+    transform: translateX(105%);
     
     
 }
@@ -520,6 +520,7 @@ font-style: italic;
   background:
               linear-gradient(25deg, rgb(167, 95, 95), rgb(83, 142, 190)) border-box;
   border-radius: 0 0 5px 5px;
+  margin-top: -1%;
 }
 
 .a1 {
