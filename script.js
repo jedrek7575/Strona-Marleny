@@ -107,3 +107,23 @@ document.addEventListener("DOMContentLoaded", function() {
     lightbox.style.display = "none";
   });
 });
+
+//Rozwijanie kontaktu//
+
+document.addEventListener("DOMContentLoaded", function () {
+  const fbImage = document.querySelector(".fb");
+  const fbText = document.querySelector(".fbt");
+
+  fbImage.addEventListener("click", function (event) {
+      fbText.classList.toggle("active");
+      event.stopPropagation(); // Zatrzymuje propagację, żeby kliknięcie na obrazek nie ukrywało linku od razu
+  });
+
+  document.addEventListener("click", function (event) {
+      if (!fbText.contains(event.target) && !fbImage.contains(event.target)) {
+          fbText.classList.remove("active");
+      }
+  });
+});
+
+
